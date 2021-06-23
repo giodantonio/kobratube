@@ -183,7 +183,7 @@ window.onload = () => {
 		if(document.body.offsetWidth <= 425){
 			document.querySelector(".div-search-mb").style.display='block';
 			document.querySelector(".overlay-mb").style.display='block';
-	
+
 			document.querySelector('.search-mb-back').addEventListener('click', () => {
 				document.querySelector(".div-search-mb").style.display='none';
 				document.querySelector(".overlay-mb").style.display='none';
