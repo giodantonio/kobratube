@@ -1,0 +1,1763 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="KOBRATube">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="https://i.imgur.com/ZrO8GJg.png">
+    <meta property="og:description" content="Programando la página de inicio de YouTube.com [ HTML + CSS + JAVASCRIPT ]">
+    <title>KOBRATube</title>
+    <link rel="shortcut icon" href="./img/icon_kobratube.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="div-search-mb">
+        <div class="search-mb-flex">
+            <div class="search-mb-back">
+                <span class="material-icons md-28 md-mobile">arrow_back</span></label>
+            </div>
+            <form name="smobile" action="https://www.youtube.com/results?search_query=" method="GET">
+                <input type="text" name="q" class="no-style" id="search-mb" placeholder="Buscar en YouTube">
+            </form>
+            <button class="btn-s no-style"><span class="material-icons md-28 md-mobile">search</span></button>
+        </div>
+    </div>
+    <div class="grid-container">
+        <div class="header flex-container">
+            <div class="mobile-header-box">
+                <img class="box1__logo" src="./img/logo_kobratube.svg" alt="logo YouTube">
+                <div class="icons-mobile">
+                    <button class="btn-mobile no-style">
+                        <span class="material-icons md-28 md-mobile">search</span>
+                    </button>
+                    <button class="btn-mobile no-style">
+                        <a class="none" href="https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Des-419%26next%3Dhttps%253A%252F%252Fwww.youtube.com%252F&hl=es-419&ec=65620" target="_blank" rel="noopener noreferrer">
+                            <span class="material-icons md-28 md-mobile">account_circle</span>
+                        </a>
+                    </button>
+                </div>
+           
+            </div>
+            <div class="overlay-mb"></div>
+            <div class="header-box1 flex-container">
+                <span class="material-icons md-24 md-grey" id='btn-menu'>menu</span>
+                <div class="box1-logo flex-container">
+                    <img class="box1__logo" src="./img/logo_kobratube.svg" alt="logo YouTube">
+                </div>
+            </div>
+            <div class="header-box2 flex-container">
+                <form name="search" action="https://www.youtube.com/results?search_query=" method="GET" class="searchbox flex-container">
+                    <input type="search" name="q" id="searchbox" placeholder="Buscar" class="no-style">
+                    <input type="button" name="enviar" value="search" class="material-icons no-style btn-search">
+                    <button class="search-voice flex-container no-style">
+                        <span class="material-icons md-grey">mic</span>
+                    </button>
+                </form>
+            </div>
+            <div class="header-box3 flex-container">
+                <div class="topbar-buttons flex-container">
+                    <div class="dropdown-app">
+                        <span id="btn-apps"class="material-icons md-24 md-grey btn-icon">apps</span>
+                        <div id="dropdownApps" class="dropdown-app-container">
+                            <div class="dropdown__item">
+                                <a href="#" class="no-style dropdown__anchor flex-container"><span class="material-icons md-24 md--active dropdown__icon">ondemand_video</span>YouTube TV</a>
+                            </div>
+                            <div class="dropdown__item">
+                                <a href="#" class="no-style dropdown__anchor flex-container"><span class="material-icons md-24 md--active dropdown__icon">play_circle_filled</span>YouTube Music</a>
+                                <a href="#" class="no-style dropdown__anchor flex-container"><span class="material-icons md-24 md--active dropdown__icon">smart_display</span>YouTube kids</a>
+                            </div>
+                            <div class="dropdown__item">
+                                <a href="#" class="no-style dropdown__anchor flex-container"><span class="material-icons md-24 md--active dropdown__icon">smart_display</span>Academia de Creadores</a>
+                                <a href="#" class="no-style dropdown__anchor flex-container"><span class="material-icons md-24 md--active dropdown__icon">smart_display</span>YouTube para Artistas</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown-config">
+                        <span class="material-icons md-24 md-grey btn-icon" id="btn-config">more_vert</span>
+                        <div id="dropdownConf" class="dropdown-config-container">
+                            <div class="dropdown__item">
+                                <a href="#" class="no-style dropdown__anchor flex-container"><span class="material-icons md-24 dropdown__icon md-grey-s">brightness_4</span>Aspecto: Tema del dispositivo</a>
+
+                                <a href="#" class="no-style dropdown__anchor flex-container"><span class="material-icons md-24 dropdown__icon md-grey-s">translate</span>Idioma: Español latinoamericano</a>
+
+                                <a href="#" class="no-style dropdown__anchor flex-container"><span class="material-icons md-24 dropdown__icon md-grey-s">language</span>Ubicación: Venezuela</a>
+
+                                <a href="#" class="no-style dropdown__anchor flex-container"><span class="material-icons md-24 md-grey dropdown__icon md-grey-s">settings</span>Configuración</a>
+
+                                <a href="#" class="no-style dropdown__anchor flex-container"><span class="material-icons md-24 dropdown__icon md-grey-s">gpp_good</span>Tus datos en YouTube</a>
+
+                                <a href="#" class="no-style dropdown__anchor flex-container"><span class="material-icons md-24 dropdown__icon md-grey-s">help</span>Ayuda</a>
+
+                                <a href="#" class="no-style dropdown__anchor flex-container"><span class="material-icons md-24 dropdown__icon md-grey-s">feedback</span>Enviar comentarios</a>
+
+                                <a href="#" class="no-style dropdown__anchor flex-container"><span class="material-icons md-24 dropdown__icon md-grey-s">keyboard</span>Combinación de teclas</a>
+                            </div>
+                            <div class="dropdown__item">
+                                <a href="#" class="no-style dropdown__anchor flex-container">Modo restringido: desactivado</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn-access no-style flex-container">
+                        <span class="material-icons md-30 md-blue">account_circle</span>
+                        &nbspacceder
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="nav-tags">
+            <div class="carousel__contenedor">
+                <button role="button" id='preview' aria-label="Anterior" class="container-btn carousel__anterior no-style">
+                    <span class="material-icons">chevron_left</span>
+                </button>
+                <div class="carousel__lista no-style">
+                    <a href="#" target="_blank" rel="noopener noreferrer" id="ítem" class="carousel__item carousel__item--active no-style" style="width:fit-content;">Todos</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" id="ítem" class="carousel__item no-style" style="width:fit-content;">Música</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" id="ítem" class="carousel__item no-style" style="width:fit-content;">Salsa romántica</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" id="ítem" class="carousel__item no-style" style="width:fit-content;">Blues rock</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" id="ítem" class="carousel__item no-style" style="width:fit-content;">Salsa</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" id="ítem" class="carousel__item no-style" style="width:fit-content;">Deep house</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" id="ítem" class="carousel__item no-style" style="width:fit-content;">Balada romántica</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" id="ítem" class="carousel__item no-style" style="width:fit-content;">Vallenato</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" id="ítem" class="carousel__item no-style" style="width:fit-content;">Karol G</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" id="ítem" class="carousel__item no-style" style="width:fit-content;">Reguetón</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" id="ítem" class="carousel__item no-style" style="width:fit-content;">Chill out</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" id="ítem" class="carousel__item no-style" style="width:fit-content;">Éxitos</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" id="ítem" class="carousel__item no-style" style="width:fit-content;">Bad Bunny</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" id="ítem" class="carousel__item no-style" style="width:fit-content;">Pastelería</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" id="ítem" class="carousel__item no-style" style="width:fit-content;">Álbumes</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" id="ítem" class="carousel__item no-style" style="width:fit-content;">Madera</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" id="ítem" class="carousel__item no-style" style="width:fit-content;">Naturaleza</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" id="ítem" class="carousel__item no-style" style="width:fit-content;">Subidos recientemente</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" id="ítem" class="carousel__item no-style">En tiempo real</a>
+                </div>
+                <button role="button" id='next' aria-label="Siguiente" class="container-btn carousel__siguiente no-style">
+                    <span class="material-icons">chevron_right</span>
+                </button>
+            </div>
+        </div>
+        <aside class="aside">
+            <div class="aside-small" id="menu-small">
+                <div class="aside-small__item">
+                    <span class="material-icons md-24 md-grey md--active">home</span>
+                    <p class="aside-small__text md--active">Principal</p>
+                </div>
+                <div class="aside-small__item">
+                    <span class="material-icons md-24 md-grey">explore</span>
+                    <p class="aside-small__text">Explorar</p>
+                </div>
+                <div class="aside-small__item">
+                    <span class="material-icons md-24 md-grey">subscriptions</span>
+                    <p class="aside-small__text">Suscriptores</p>
+                </div>
+                <div class="aside-small__item">
+                    <span class="material-icons md-24 md-grey">video_library</span>
+                    <p class="aside-small__text">Biblioteca</p>
+                </div>
+                <div class="aside-small__item">
+                    <span class="material-icons md-24 md-grey">restore</span>
+                    <p class="aside-small__text">Historial</p>
+                </div>
+            </div>
+            <div class="aside-larger" id="menu-larger">
+                <!-- *Block-1-->
+                <div class="a-width mod-t1">
+                    <ul class="mod__list">
+                        <li class="list-item list-item--active no-style no-style flex-container">
+                            <span class="material-icons md-24 md-grey md--active">home</span>
+                            <a href="./index.html" class="no-style liste-item__anchor anchor--active">Principal</a>
+                        </li>
+                        <li class="list-item no-style flex-container">
+                            <span class="material-icons md-24 md-grey">explore</span>
+                            <a href="https://www.youtube.com/feed/explore" class="no-style liste-item__anchor">Explorar</a>
+                        </li>
+                        <li class="list-item no-style flex-container">
+                            <span class="material-icons md-24 md-grey">subscriptions</span>
+                            <a href="https://www.youtube.com/feed/subscriptions" class="no-style liste-item__anchor ">Suscripciones</a>
+                        </li>
+                        <div class="border-bottom">
+                        </div>
+                    </ul>
+                </div>
+                <!-- *Block-1 END-->
+                <div class="a-width mod-t1">
+                    <ul class="mod__list">
+                        <li class="list-item flex-container">
+                            <span class="material-icons md-24 md-grey">video_library</span>
+                            <a href="https://www.youtube.com/feed/library" class="no-style liste-item__anchor">Biblioteca</a>
+                        </li>
+                        <li class="list-item flex-container">
+                            <span class="material-icons md-24 md-grey">restore</span>
+                            <a href="https://www.youtube.com/feed/history" class="no-style liste-item__anchor">Historial</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="a-width mod-t2">
+                    <p class="mod__texto">
+                        Accede para dar “Me gusta” a los videos, realizar comentarios y suscribirte.
+                    </p>
+                    <button class="btn-access no-style flex-container">
+                        <span class="material-icons md-30 md-blue">account_circle</span>
+                        &nbspacceder
+                    </button>
+                </div>
+                <div class="a-width mod-t3">
+                    <h3 class="s-h3">Lo mejor de youtube</h3>
+                    <div class="mod__list">
+                        <div class="list-item flex-container">
+                            <img class="icon-round" src="https://yt3.ggpht.com/JhpXfBmbZqGMa1HngX8Kc8MY5t2q_cFU1mei9SGiuDnmBkoEiaGlD1NR8NxmHPqVLRcyo6Kf=s88-c-k-c0x00ffffff-no-rj" alt="icon music">
+                            <a href="https://www.youtube.com/channel/UC-9-kyTW8ZkZNDHQJ6FgpwQ" class="no-style liste-item__anchor">Música</a>
+                        </div>
+                        <div class="list-item flex-container">
+                            <img class="icon-round" src="https://yt3.ggpht.com/Iw_1zfYpObc2HCiJtUWzzELUEr84sbfU6bWO4iefIdTJ3YWqIuJ3uVo5YGoiYUdXPkTDXMh93w=s88-c-k-c0x00ffffff-no-rj" alt="icon music">
+                            <a href="https://www.youtube.com/channel/UCEgdi0XIXXZ-qJOFPf4JSKw" class="no-style liste-item__anchor">Deportes</a>
+                        </div>
+                        <div class="list-item flex-container">
+                            <img class="icon-round" src="https://yt3.ggpht.com/vHUJ30VhUAWP5N2xF6rhi4RnhBrATHeqPj8kdF5WuPEwCXXhC8XdMnTJSPvqJeshKt4eGD253A=s88-c-k-c0x00ffffff-no-rj" alt="icon music">
+                            <a href="https://www.youtube.com/gaming" class="no-style liste-item__anchor">Videojuegos</a>
+                        </div>
+                        <div class="list-item flex-container">
+                            <img class="icon-round" src="https://yt3.ggpht.com/EWk97IQr34nqH2nYpC0RIHGTavflWdCNdQEgF3k7mI5S_ItQxw7W40i8FAXCX8JHXInpfDC3Vg=s88-c-k-c0x00ffffff-no-rj">
+                            <a href="https://www.youtube.com/channel/UCYfdidRxbB8Qhf0Nx7ioOYw" class="no-style liste-item__anchor">Noticias</a>
+                        </div>
+                        <div class="list-item flex-container">
+                            <img class="icon-round" src="https://yt3.ggpht.com/8D6JlsnvwDZFMdcbjqVji82kggP3aXXbO-yBD0RFrKlp4G1zNt9wcqcVTSPnAI8GuUAbDYQwsg=s88-c-k-c0x00ffffff-no-rj">
+                            <a href="https://www.youtube.com/channel/UC4R8DWoMoI7CAwX8_LjQHig" class="no-style liste-item__anchor">En vivo</a>
+                        </div>
+                        <div class="list-item flex-container">
+                            <img class="icon-round" src="https://yt3.ggpht.com/Z34iSrAdmBYUcWisSoEQso5bXFWgUbOBt3YxwHWrr8302A0LGw0zObapsG9nFZUs5zT0mdQ3jQ=s88-c-k-c0x00ffffff-no-rj" alt="icon music">
+                            <a href="https://www.youtube.com/channel/UCtFRv9O2AHqOZjjynzrv-xg" class="no-style liste-item__anchor">Aprendizaje</a>
+                        </div>
+                        <div class="list-item flex-container">
+                            <img class="icon-round" src="https://yt3.ggpht.com/aBfjxEI67MQnGxlrC0YOpNMxHsL8jMsRbBduI8XyHbT1ft1ayPbzk9ymRyp93e9HWo8A8DZn0Q=s88-c-k-c0x00ffffff-no-rj" alt="icon music">
+                            <a href="https://www.youtube.com/channel/UCzuqhhs6NWbgTzMuM09WKDQ" class="no-style liste-item__anchor">Video en 360°</a>
+                        </div>
+                    </div>
+                    <div class="a-width mod-t4">
+                        <div class="list-item flex-container">
+                            <span class="material-icons md-24 md-grey">add_circle</span>
+                            <a href="https://www.youtube.com/feed/guide_builder" class="no-style liste-item__anchor">Explorar canales</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="a-width mod-t1">
+                    <h3 class="s-h3">Más de youtube</h3>
+                    <ul class="mod__list">
+                        <li class="list-item flex-container">
+                            <span class="material-icons md-24 md-grey">smart_display</span>
+                            <a href="https://www.youtube.com/premium" class="no-style liste-item__anchor">YouTube Premium</a>
+                        </li>
+                        <li class="list-item flex-container">
+                            <span class="material-icons md-24 md-grey">sensors</span>
+                            <a href="https://www.youtube.com/channel/UC4R8DWoMoI7CAwX8_LjQHig" class="no-style liste-item__anchor">En vivo</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="a-width mod-t1">
+                    <ul class="mod__list">
+                        <li class="list-item flex-container">
+                            <span class="material-icons md-24 md-grey">settings</span>
+                            <a href="https://www.youtube.com/account" class="no-style liste-item__anchor">Configuración</a>
+                        </li>
+                        <li class="list-item flex-container">
+                            <span class="material-icons md-24 md-grey">assistant_photo</span>
+                            <a href="https://www.youtube.com/reporthistory" class="no-style liste-item__anchor">Historial de denuncias</a>
+                        </li>
+                        <li class="list-item flex-container">
+                            <span class="material-icons md-24 md-grey">help</span>
+                            <a href="#" class="no-style liste-item__anchor">Ayuda</a>
+                        </li>
+                        <li class="list-item flex-container">
+                            <span class="material-icons md-24 md-grey">announcement</span>
+                            <a href="#" class="no-style liste-item__anchor">Enviar comentarios</a>
+                        </li>
+                    </ul>
+                </div>
+                <footer class="a-width aside-footer">
+                    <div class="footer-info">
+                        <a class="no-style info-anchor" href="">Acerca de</a>
+                        <a class="no-style info-anchor" href="#">Prensa</a>
+                        <a class="no-style info-anchor" href="#">Derechos de autor</a>
+                        <a class="no-style info-anchor" href="#">Comunicarte con nosotros</a>
+                        <a class="no-style info-anchor" href="#">Creadores</a>
+                        <a class="no-style info-anchor" href="#">Anunciar</a>
+                        <a class="no-style info-anchor" href="#">Desarrolladores</a>
+                    </div>
+                    <div class="footer-info">
+                        <a class="no-style info-anchor" href="#">Condiciones Privacidad</a>
+                        <a class="no-style info-anchor" href="#">Políticas y seguridad</a>
+                        <a class="no-style info-anchor" href="#">Cómo funciona YouTube</a>
+                        <a class="no-style info-anchor" href="#">Prueba funciones nuevas</a>
+                    </div>
+                    <div class="footer-copy">
+                        <p>© 2021 <a class="a-copy no-style" href="https://kobracreatives.netlify.app/" target="_blank" rel="noopener noreferrer">Kobra Creatives</a></p>
+                    </div>
+                </footer>
+            </div>
+            <div class="aside-larger-over">
+                <span class="material-icons md-24 md-grey btn-menu2" id='btn-menu2'>menu</span>
+                <!-- *Block-1-->
+                <div class="a-width mod-t1">
+                    <ul class="mod__list">
+                        <li class="list-item list-item--active no-style no-style flex-container">
+                            <span class="material-icons md-24 md-grey md--active">home</span>
+                            <a href="./index.html" class="no-style liste-item__anchor anchor--active">Principal</a>
+                        </li>
+                        <li class="list-item no-style flex-container">
+                            <span class="material-icons md-24 md-grey">explore</span>
+                            <a href="https://www.youtube.com/feed/explore" class="no-style liste-item__anchor">Explorar</a>
+                        </li>
+                        <li class="list-item no-style flex-container">
+                            <span class="material-icons md-24 md-grey">subscriptions</span>
+                            <a href="https://www.youtube.com/feed/subscriptions" class="no-style liste-item__anchor ">Suscripciones</a>
+                        </li>
+                        <div class="border-bottom">
+                        </div>
+                    </ul>
+                </div>
+                <!-- *Block-1 END-->
+                <div class="a-width mod-t1">
+                    <ul class="mod__list">
+                        <li class="list-item flex-container">
+                            <span class="material-icons md-24 md-grey">video_library</span>
+                            <a href="https://www.youtube.com/feed/library" class="no-style liste-item__anchor">Biblioteca</a>
+                        </li>
+                        <li class="list-item flex-container">
+                            <span class="material-icons md-24 md-grey">restore</span>
+                            <a href="https://www.youtube.com/feed/history" class="no-style liste-item__anchor">Historial</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="a-width mod-t2">
+                    <p class="mod__texto">
+                        Accede para dar “Me gusta” a los videos, realizar comentarios y suscribirte.
+                    </p>
+                    <button class="btn-access no-style flex-container">
+                        <span class="material-icons md-30 md-blue">account_circle</span>
+                        &nbspacceder
+                    </button>
+                </div>
+                <div class="a-width mod-t3">
+                    <h3 class="s-h3">Lo mejor de youtube</h3>
+                    <div class="mod__list">
+                        <div class="list-item flex-container">
+                            <img class="icon-round" src="https://yt3.ggpht.com/JhpXfBmbZqGMa1HngX8Kc8MY5t2q_cFU1mei9SGiuDnmBkoEiaGlD1NR8NxmHPqVLRcyo6Kf=s88-c-k-c0x00ffffff-no-rj" alt="icon music">
+                            <a href="https://www.youtube.com/channel/UC-9-kyTW8ZkZNDHQJ6FgpwQ" class="no-style liste-item__anchor">Música</a>
+                        </div>
+                        <div class="list-item flex-container">
+                            <img class="icon-round" src="https://yt3.ggpht.com/Iw_1zfYpObc2HCiJtUWzzELUEr84sbfU6bWO4iefIdTJ3YWqIuJ3uVo5YGoiYUdXPkTDXMh93w=s88-c-k-c0x00ffffff-no-rj" alt="icon music">
+                            <a href="https://www.youtube.com/channel/UCEgdi0XIXXZ-qJOFPf4JSKw" class="no-style liste-item__anchor">Deportes</a>
+                        </div>
+                        <div class="list-item flex-container">
+                            <img class="icon-round" src="https://yt3.ggpht.com/vHUJ30VhUAWP5N2xF6rhi4RnhBrATHeqPj8kdF5WuPEwCXXhC8XdMnTJSPvqJeshKt4eGD253A=s88-c-k-c0x00ffffff-no-rj" alt="icon music">
+                            <a href="https://www.youtube.com/gaming" class="no-style liste-item__anchor">Videojuegos</a>
+                        </div>
+                        <div class="list-item flex-container">
+                            <img class="icon-round" src="https://yt3.ggpht.com/EWk97IQr34nqH2nYpC0RIHGTavflWdCNdQEgF3k7mI5S_ItQxw7W40i8FAXCX8JHXInpfDC3Vg=s88-c-k-c0x00ffffff-no-rj">
+                            <a href="https://www.youtube.com/channel/UCYfdidRxbB8Qhf0Nx7ioOYw" class="no-style liste-item__anchor">Noticias</a>
+                        </div>
+                        <div class="list-item flex-container">
+                            <img class="icon-round" src="https://yt3.ggpht.com/8D6JlsnvwDZFMdcbjqVji82kggP3aXXbO-yBD0RFrKlp4G1zNt9wcqcVTSPnAI8GuUAbDYQwsg=s88-c-k-c0x00ffffff-no-rj">
+                            <a href="https://www.youtube.com/channel/UC4R8DWoMoI7CAwX8_LjQHig" class="no-style liste-item__anchor">En vivo</a>
+                        </div>
+                        <div class="list-item flex-container">
+                            <img class="icon-round" src="https://yt3.ggpht.com/Z34iSrAdmBYUcWisSoEQso5bXFWgUbOBt3YxwHWrr8302A0LGw0zObapsG9nFZUs5zT0mdQ3jQ=s88-c-k-c0x00ffffff-no-rj" alt="icon music">
+                            <a href="https://www.youtube.com/channel/UCtFRv9O2AHqOZjjynzrv-xg" class="no-style liste-item__anchor">Aprendizaje</a>
+                        </div>
+                        <div class="list-item flex-container">
+                            <img class="icon-round" src="https://yt3.ggpht.com/aBfjxEI67MQnGxlrC0YOpNMxHsL8jMsRbBduI8XyHbT1ft1ayPbzk9ymRyp93e9HWo8A8DZn0Q=s88-c-k-c0x00ffffff-no-rj" alt="icon music">
+                            <a href="https://www.youtube.com/channel/UCzuqhhs6NWbgTzMuM09WKDQ" class="no-style liste-item__anchor">Video en 360°</a>
+                        </div>
+                    </div>
+                    <div class="a-width mod-t4">
+                        <div class="list-item flex-container">
+                            <span class="material-icons md-24 md-grey">add_circle</span>
+                            <a href="https://www.youtube.com/feed/guide_builder" class="no-style liste-item__anchor">Explorar canales</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="a-width mod-t1">
+                    <h3 class="s-h3">Más de youtube</h3>
+                    <ul class="mod__list">
+                        <li class="list-item flex-container">
+                            <span class="material-icons md-24 md-grey">smart_display</span>
+                            <a href="https://www.youtube.com/premium" class="no-style liste-item__anchor">YouTube Premium</a>
+                        </li>
+                        <li class="list-item flex-container">
+                            <span class="material-icons md-24 md-grey">sensors</span>
+                            <a href="https://www.youtube.com/channel/UC4R8DWoMoI7CAwX8_LjQHig" class="no-style liste-item__anchor">En vivo</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="a-width mod-t1">
+                    <ul class="mod__list">
+                        <li class="list-item flex-container">
+                            <span class="material-icons md-24 md-grey">settings</span>
+                            <a href="https://www.youtube.com/account" class="no-style liste-item__anchor">Configuración</a>
+                        </li>
+                        <li class="list-item flex-container">
+                            <span class="material-icons md-24 md-grey">assistant_photo</span>
+                            <a href="https://www.youtube.com/reporthistory" class="no-style liste-item__anchor">Historial de denuncias</a>
+                        </li>
+                        <li class="list-item flex-container">
+                            <span class="material-icons md-24 md-grey">help</span>
+                            <a href="#" class="no-style liste-item__anchor">Ayuda</a>
+                        </li>
+                        <li class="list-item flex-container">
+                            <span class="material-icons md-24 md-grey">announcement</span>
+                            <a href="#" class="no-style liste-item__anchor">Enviar comentarios</a>
+                        </li>
+                    </ul>
+                </div>
+                <footer class="a-width aside-footer">
+                    <div class="footer-info">
+                        <a class="no-style info-anchor" href="">Acerca de</a>
+                        <a class="no-style info-anchor" href="#">Prensa</a>
+                        <a class="no-style info-anchor" href="#">Derechos de autor</a>
+                        <a class="no-style info-anchor" href="#">Comunicarte con nosotros</a>
+                        <a class="no-style info-anchor" href="#">Creadores</a>
+                        <a class="no-style info-anchor" href="#">Anunciar</a>
+                        <a class="no-style info-anchor" href="#">Desarrolladores</a>
+                    </div>
+                    <div class="footer-info">
+                        <a class="no-style info-anchor" href="#">Condiciones Privacidad</a>
+                        <a class="no-style info-anchor" href="#">Políticas y seguridad</a>
+                        <a class="no-style info-anchor" href="#">Cómo funciona YouTube</a>
+                        <a class="no-style info-anchor" href="#">Prueba funciones nuevas</a>
+                    </div>
+                    <div class="footer-copy">
+                        <p>© 2021 <a class="a-copy no-style" href="https://kobracreatives.netlify.app/" target="_blank" rel="noopener noreferrer">Kobra Creatives</a></p>
+                    </div>
+                </footer>
+            </div>
+        </aside>
+        <div class="navbar-mobile">
+            <a href="#top" class="no-style">
+                <div class="nav-mb">
+                    <span class="material-icons md-28 md-grey">home</span>
+                    <p class="nav-mb-text">Principal</p>
+                </div>
+            </a>
+            <a href="#tendencias" class="no-style">
+                <div class="nav-mb">
+                    <span class="material-icons md-28 md-grey ">local_fire_department</span>
+                    <p class="nav-mb-text">Tendencias</p>
+                </div>
+            </a>
+            <a href="#" class="no-style">
+                <div class="nav-mb">
+                    <span class="material-icons md-28 md-grey">video_library</span>
+                    <p class="nav-mb-text">Biblioteca</p>
+                </div>
+            </a>
+        </div>
+        <div class="main">
+            <div class="container-videos flex-container">
+                <div class="grid-videos" id="top">
+                    <div class="card">
+                        <div class="container-img">
+                            <div class="container-img__items">
+                                <div class="item1__left">
+                                    Ver más tarde
+                                </div>
+                                <p class="container-img__item item1">
+                                    <span class="material-icons-round md-16">watch_later</span>
+                                </p>
+                                <div class="item2__left">
+                                    Agregar a la fila
+                                </div>
+                                <p class="container-img__item item2">
+                                    <span class="material-icons-round">playlist_play</span>
+                                </p>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=wMOkm57vu0k" target="_blank" rel="noopener noreferrer" class="no-style">
+                                <img src="https://i.ytimg.com/vi/wMOkm57vu0k/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC2K1_nMDY-AxjhV6P2aI5C2Hpgdg" alt="" class="cover-video img-responsive">
+                                <div class="container-img__contador">
+                                    <p class="container-img__num">4:01</p>
+                                </div>
+                            </a>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=wMOkm57vu0k" target="_blank" rel="noopener noreferrer" class="no-style">
+                            <div class="video-info-container">
+                                <div class="avatar">
+                                    <img src="https://yt3.ggpht.com/ytc/AAUvwnhaiixWFM7KeOKfsVQvh6DaaGgz5Fxu7b1xAXRExQ=s88-c-k-c0x00ffffff-no-rj" alt="avatar" class="avatar-img img-responsive">
+                                </div>
+                                <div class="info-text">
+                                    <div class="div-title">
+                                        <h3 title="ackstreet Boys - The Call (Official HD Video)"class="info-title">Backstreet Boys - The Call (Official HD Video)</h3>
+                                    </div>
+                                    <div class="info-description">
+                                        <span class="info-inline name-inline">Backstreet Boys &#x266a;&nbsp;</span>
+                                        <span class="info-inline">16 M de vistas&nbsp; </span>
+                                        <span class="info-inline inline--separator">•<span class="info-inline">&nbsp;hace 2 años</span></span>
+                                    </div>
+                                </div>
+                                <div class="btn-info">
+                                    <button class="btn-more no-style">
+                                        <span class="material-icons md-24">more_vert</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <div class="container-img">
+                            <div class="container-img__items">
+                                <div class="item1__left">
+                                    Ver más tarde
+                                </div>
+                                <p class="container-img__item item1">
+                                    <span class="material-icons-round md-16">watch_later</span>
+                                </p>
+                                <div class="item2__left">
+                                    Agregar a la fila
+                                </div>
+                                <p class="container-img__item item2">
+                                    <span class="material-icons-round">playlist_play</span>
+                                </p>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=i-fYCOHD9jk" target="_blank" rel="noopener noreferrer" class="no-style">
+                                <img src="https://i.ytimg.com/vi/i-fYCOHD9jk/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBhOYufXsmDYyQZAWLkQk17vlKfmA" alt="" class="cover-video img-responsive">
+                                <div class="container-img__contador">
+                                    <p class="container-img__num">11:54:59</p>
+                                </div>
+                            </a>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=i-fYCOHD9jk" target="_blank" rel="noopener noreferrer" class="no-style">
+                            <div class="video-info-container">
+                                <div class="avatar">
+                                    <img src="https://yt3.ggpht.com/ytc/AAUvwnj1_34UTv9-La0Kdm9uYUKBOLK2fQN6TA4v1nqN=s68-c-k-c0x00ffffff-no-rj" alt="avatar" class="avatar-img img-responsive">
+                                </div>
+                                <div class="info-text">
+                                    <div class="div-title">
+                                        <h3 title="Romantic Ballads From The 80s And 90s In Spanish 💖💖 Old But Beautiful Romantic Songs"class="info-title">Romantic Ballads From The 80s And 90s In Spanish 💖💖 Old But Beautiful Romantic Songs</h3>
+                                    </div>
+                                    <div class="info-description">
+                                        <span class="info-inline name-inline">Musíca de radio en vivo&nbsp;</span>
+                                        <span class="info-inline">1 M de vistas&nbsp; </span>
+                                        <span class="info-inline inline--separator">•<span class="info-inline">&nbsp;hace 2 meses</span></span>
+                                    </div>
+                                </div>
+                                <div class="btn-info">
+                                    <button class="btn-more no-style">
+                                        <span class="material-icons md-24">more_vert</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <div class="container-img">
+                            <div class="container-img__items">
+                                <div class="item1__left">
+                                    Ver más tarde
+                                </div>
+                                <p class="container-img__item item1">
+                                    <span class="material-icons-round md-16">watch_later</span>
+                                </p>
+                                <div class="item2__left">
+                                    Agregar a la fila
+                                </div>
+                                <p class="container-img__item item2">
+                                    <span class="material-icons-round">playlist_play</span>
+                                </p>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=zisuhZqTeH4" target="_blank" rel="noopener noreferrer" class="no-style">
+                                <img src="https://i.ytimg.com/vi/zisuhZqTeH4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBgy7iGjvpZar1g07sMYeraHu7AMQ" alt="" class="cover-video img-responsive">
+                                <div class="container-img__contador">
+                                    <p class="container-img__num">3:37</p>
+                                </div>
+                            </a>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=zisuhZqTeH4" target="_blank" rel="noopener noreferrer" class="no-style">
+                            <div class="video-info-container">
+                                <div class="avatar">
+                                    <img src="https://yt3.ggpht.com/ytc/AAUvwnhwI6J_BIoj9r7f4fGGdmyCnlJiEhER8O_FKy_pBw=s88-c-k-c0x00ffffff-no-rj" alt="avatar" class="avatar-img img-responsive">
+                                </div>
+                                <div class="info-text">
+                                    <div class="div-title">
+                                        <h3 title="J. Balvin, Maria Becerra - Qué Más Pues? (Official Video)"class="info-title">J. Balvin, Maria Becerra - Qué Más Pues? (Official Video)</h3>
+                                    </div>
+                                    <div class="info-description">
+                                        <span class="info-inline name-inline">J Balvin &#x266a;&nbsp;</span>
+                                        <span class="info-inline">15 M de vistas&nbsp; </span>
+                                        <span class="info-inline inline--separator">•<span class="info-inline">&nbsp;hace 6 días</span></span>
+                                    </div>
+                                </div>
+                                <div class="btn-info">
+                                    <button class="btn-more no-style">
+                                        <span class="material-icons md-24">more_vert</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <div class="container-img">
+                            <div class="container-img__items">
+                                <div class="item1__left">
+                                    Ver más tarde
+                                </div>
+                                <p class="container-img__item item1">
+                                    <span class="material-icons-round md-16">watch_later</span>
+                                </p>
+                                <div class="item2__left">
+                                    Agregar a la fila
+                                </div>
+                                <p class="container-img__item item2">
+                                    <span class="material-icons-round">playlist_play</span>
+                                </p>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=eVIozKR9p50" target="_blank" rel="noopener noreferrer" class="no-style">
+                                <img src="https://i.ytimg.com/vi/eVIozKR9p50/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB2KH7yMYhr7pRgLsN1LgS3CKZzxQ" alt="" class="cover-video img-responsive">
+                                <div class="container-img__contador">
+                                    <p class="container-img__num">1:28:57</p>
+                                </div>
+                            </a>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=eVIozKR9p50" target="_blank" rel="noopener noreferrer" class="no-style">
+                            <div class="video-info-container">
+                                <div class="avatar">
+                                    <img src="https://yt3.ggpht.com/ytc/AAUvwniYputEvcBLySSgYq4TrgB8Ya3o6hXUzQiS1e7Big=s68-c-k-c0x00ffffff-no-rj" alt="avatar" class="avatar-img img-responsive">
+                                </div>
+                                <div class="info-text">
+                                    <div class="div-title">
+                                        <h3 title="Dua Lipa, Coldplay, Martin Garrix & Kygo, The Chainsmokers Style - Feeling Me #27"class="info-title">Dua Lipa, Coldplay, Martin Garrix & Kygo, The Chainsmokers Style - Feeling Me #27</h3>
+                                    </div>
+                                    <div class="info-description">
+                                        <span class="info-inline name-inline">Miracle Music&nbsp;</span>
+                                        <span class="info-inline">13 M de vistas&nbsp; </span>
+                                        <span class="info-inline inline--separator">•<span class="info-inline">&nbsp;hace 1 año</span></span>
+                                    </div>
+                                </div>
+                                <div class="btn-info">
+                                    <button class="btn-more no-style">
+                                        <span class="material-icons md-24">more_vert</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <div class="container-img">
+                            <div class="container-img__items">
+                                <div class="item1__left">
+                                    Ver más tarde
+                                </div>
+                                <p class="container-img__item item1">
+                                    <span class="material-icons-round md-16">watch_later</span>
+                                </p>
+                                <div class="item2__left">
+                                    Agregar a la fila
+                                </div>
+                                <p class="container-img__item item2">
+                                    <span class="material-icons-round">playlist_play</span>
+                                </p>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=uU3AIBmXF1o" target="_blank" rel="noopener noreferrer" class="no-style">
+                                <img src="https://i.ytimg.com/vi/uU3AIBmXF1o/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBngXdZQXZj4KsCpERZ-QKqKvSEpQ" alt="" class="cover-video img-responsive">
+                                <div class="container-img__contador">
+                                    <p class="container-img__num">22:49</p>
+                                </div>
+                            </a>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=uU3AIBmXF1o" target="_blank" rel="noopener noreferrer" class="no-style">
+                            <div class="video-info-container">
+                                <div class="avatar">
+                                    <img src="https://yt3.ggpht.com/ytc/AAUvwnhdzTxKIoL6_hD3MRISrbKcSLISnyeGl4wzNsLh=s68-c-k-c0x00ffffff-no-rj" alt="avatar" class="avatar-img img-responsive">
+                                </div>
+                                <div class="info-text">
+                                    <div class="div-title">
+                                        <h3 title="Tom und Jerry auf Deutsch | Klassischer Cartoon 115 | WB Kids"class="info-title">Tom und Jerry auf Deutsch | Klassischer Cartoon 115 | WB Kids</h3>
+                                    </div>
+                                    <div class="info-description">
+                                        <span class="info-inline name-inline">WB Kids Deutschland &#10003;&nbsp;</span>
+                                        <span class="info-inline">6.6 M de vistas&nbsp; </span>
+                                        <span class="info-inline inline--separator">•<span class="info-inline">&nbsp;hace 4 meses</span></span>
+                                    </div>
+                                </div>
+                                <div class="btn-info">
+                                    <button class="btn-more no-style">
+                                        <span class="material-icons md-24">more_vert</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <div class="container-img">
+                            <div class="container-img__items">
+                                <div class="item1__left">
+                                    Ver más tarde
+                                </div>
+                                <p class="container-img__item item1">
+                                    <span class="material-icons-round md-16">watch_later</span>
+                                </p>
+                                <div class="item2__left">
+                                    Agregar a la fila
+                                </div>
+                                <p class="container-img__item item2">
+                                    <span class="material-icons-round">playlist_play</span>
+                                </p>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=YwodhCjFbQ8" target="_blank" rel="noopener noreferrer" class="no-style">
+                                <img src="https://i.ytimg.com/vi/YwodhCjFbQ8/hq720.jpg?sqp=-…AFwAcABBg==&rs=AOn4CLC8E_EX0c_StTsQZng00GhSp2minw" alt="" class="cover-video img-responsive">
+                                <div class="container-img__contador">
+                                    <p class="container-img__num">3:04</p>
+                                </div>
+                            </a>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=YwodhCjFbQ8" target="_blank" rel="noopener noreferrer" class="no-style">
+                            <div class="video-info-container">
+                                <div class="avatar">
+                                    <img src="https://yt3.ggpht.com/ytc/AAUvwniG4gYE_5wcrNUbUc51eEXT5egOjr0jqbl-i0PT2A=s88-c-k-c0x00ffffff-no-rj" alt="avatar" class="avatar-img img-responsive">
+                                </div>
+                                <div class="info-text">
+                                    <div class="div-title">
+                                        <h3 title="Camilo, Evaluna Montaner - Por Primera Vez (Official Video)"class="info-title">Camilo, Evaluna Montaner - Por Primera Vez (Official Video)</h3>
+                                    </div>
+                                    <div class="info-description">
+                                        <span class="info-inline name-inline">Camilo &#x266a;&nbsp;</span>
+                                        <span class="info-inline">399 M de vistas&nbsp; </span>
+                                        <span class="info-inline inline--separator">•<span class="info-inline">&nbsp;hace 1 año</span></span>
+                                    </div>
+                                </div>
+                                <div class="btn-info">
+                                    <button class="btn-more no-style">
+                                        <span class="material-icons md-24">more_vert</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <div class="container-img">
+                            <div class="container-img__items">
+                                <div class="item1__left">
+                                    Ver más tarde
+                                </div>
+                                <p class="container-img__item item1">
+                                    <span class="material-icons-round md-16">watch_later</span>
+                                </p>
+                                <div class="item2__left">
+                                    Agregar a la fila
+                                </div>
+                                <p class="container-img__item item2">
+                                    <span class="material-icons-round">playlist_play</span>
+                                </p>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=hE0dUJkrFug" target="_blank" rel="noopener noreferrer" class="no-style">
+                                <img src="https://i.ytimg.com/vi/hE0dUJkrFug/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA6hpew9E2_5s86Ag9z0nXihEtJ4g" alt="" class="cover-video img-responsive">
+                                <div class="container-img__contador">
+                                    <p class="container-img__num">10:32:36</p>
+                                </div>
+                            </a>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=hE0dUJkrFug" target="_blank" rel="noopener noreferrer" class="no-style">
+                            <div class="video-info-container">
+                                <div class="avatar">
+                                    <img src="https://yt3.ggpht.com/ytc/AAUvwnhhaEIJqZXE2S1Gk19EY6-vFno9vOpY4-bFxYBDCg=s68-c-k-c0x00ffffff-no-rj" alt="avatar" class="avatar-img img-responsive">
+                                </div>
+                                <div class="info-text">
+                                    <div class="div-title">
+                                        <h3 title="Scorpiones, GNR, Bon Jovi, U2, Led Zeppelin, Aerosmith 📻Baladas de rock Años 70 Años 80, Años 90"class="info-title">Scorpiones, GNR, Bon Jovi, U2, Led Zeppelin, Aerosmith 📻Baladas de rock Años 70 Años 80, Años 90</h3>
+                                    </div>
+                                    <div class="info-description">
+                                        <span class="info-inline name-inline">Music In Paradise &#10003;&nbsp;</span>
+                                        <span class="info-inline">4.8 M de vistas&nbsp; </span>
+                                        <span class="info-inline inline--separator">•<span class="info-inline">&nbsp;hace 4 meses</span></span>
+                                    </div>
+                                </div>
+                                <div class="btn-info">
+                                    <button class="btn-more no-style">
+                                        <span class="material-icons md-24">more_vert</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <div class="container-img">
+                            <div class="container-img__items">
+                                <div class="item1__left">
+                                    Ver más tarde
+                                </div>
+                                <p class="container-img__item item1">
+                                    <span class="material-icons-round md-16">watch_later</span>
+                                </p>
+                                <div class="item2__left">
+                                    Agregar a la fila
+                                </div>
+                                <p class="container-img__item item2">
+                                    <span class="material-icons-round">playlist_play</span>
+                                </p>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=AzswZ6Ntazk" target="_blank" rel="noopener noreferrer" class="no-style">
+                                <img src="https://i.ytimg.com/vi/AzswZ6Ntazk/hq720.jpg?sqp=-…AFwAcABBg==&rs=AOn4CLAZLpWv12ikRpJz11fPA-N7HIR_Gw" alt="" class="cover-video img-responsive">
+                                <div class="container-img__contador">
+                                    <p class="container-img__num">3:06</p>
+                                </div>
+                            </a>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=AzswZ6Ntazk" target="_blank" rel="noopener noreferrer" class="no-style">
+                            <div class="video-info-container">
+                                <div class="avatar">
+                                    <img src="https://yt3.ggpht.com/ytc/AAUvwnjenzirzyKuZcVe3B0PleeKJf0Tb7rvtUzuM6f9ig=s88-c-k-c0x00ffffff-no-rj" alt="avatar" class="avatar-img img-responsive">
+                                </div>
+                                <div class="info-text">
+                                    <div class="div-title">
+                                        <h3 title="Maluma - Perfecta (Video Oficial)"class="info-title">Reik, Maluma - Perfecta (Video Oficial)</h3>
+                                    </div>
+                                    <div class="info-description">
+                                        <span class="info-inline name-inline">Reik &#x266a;&nbsp;</span>
+                                        <span class="info-inline">7.7 M de vistas&nbsp; </span>
+                                        <span class="info-inline inline--separator">•<span class="info-inline">&nbsp;hace 1 semana</span></span>
+                                    </div>
+                                </div>
+                                <div class="btn-info">
+                                    <button class="btn-more no-style">
+                                        <span class="material-icons md-24">more_vert</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <h3 id="tendencias" class="text-h3">Tendencias</h3>
+                <div class="six-trending">
+                    <div class="card">
+                        <div class="container-img">
+                            <div class="container-img__items">
+                                <div class="item1__left">
+                                    Ver más tarde
+                                </div>
+                                <p class="container-img__item item1">
+                                    <span class="material-icons-round md-16">watch_later</span>
+                                </p>
+                                <div class="item2__left">
+                                    Agregar a la fila
+                                </div>
+                                <p class="container-img__item item2">
+                                    <span class="material-icons-round">playlist_play</span>
+                                </p>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=CsrYqSLt-gQ" target="_blank" rel="noopener noreferrer" class="no-style">
+                                <img src="https://i.ytimg.com/vi/CsrYqSLt-gQ/hq720.jpg?sqp=-…AFwAcABBg==&rs=AOn4CLC2sUrsCfKh7gv0cpva4mt0807dwg" alt="" class="cover-video img-responsive">
+                                <div class="container-img__contador">
+                                    <p class="container-img__num">4:14</p>
+                                </div>
+                            </a>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=CsrYqSLt-gQ" target="_blank" rel="noopener noreferrer" class="no-style">
+                            <div class="video-info-container">
+                                <div class="avatar">
+                                    <img src="https://yt3.ggpht.com/hVwsylZYvVTtoUVFH708oDrOeOsRxctzBhb5ERTmYKz0QBnzWllJTAORXnJbpF-8MiEL25g5=s176-c-k-c0x00ffffff-no-rj" alt="avatar" class="avatar-img img-responsive">
+                                </div>
+                                <div class="info-text">
+                                    <div class="div-title">
+                                        <h3 title="KHEA, Maria Becerra - Te Necesito (Official Video)"class="info-title">KHEA, Maria Becerra - Te Necesito (Official Video)</h3>
+                                    </div>
+                                    <div class="info-description">
+                                        <span class="info-inline name-inline">KHEA &#x266a;&nbsp;</span>
+                                        <span class="info-inline">28 M de vistas&nbsp; </span>
+                                        <span class="info-inline inline--separator">•<span class="info-inline">&nbsp;hace 2 semanas</span></span>
+                                    </div>
+                                </div>
+                                <div class="btn-info">
+                                    <button class="btn-more no-style">
+                                        <span class="material-icons md-24">more_vert</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <div class="container-img">
+                            <div class="container-img__items">
+                                <div class="item1__left">
+                                    Ver más tarde
+                                </div>
+                                <p class="container-img__item item1">
+                                    <span class="material-icons-round md-16">watch_later</span>
+                                </p>
+                                <div class="item2__left">
+                                    Agregar a la fila
+                                </div>
+                                <p class="container-img__item item2">
+                                    <span class="material-icons-round">playlist_play</span>
+                                </p>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=0Q21HiDJtzo" target="_blank" rel="noopener noreferrer" class="no-style">
+                                <img src="https://i.ytimg.com/vi/0Q21HiDJtzo/hq720.jpg?sqp=-…AFwAcABBg==&rs=AOn4CLAWIwqfyhfLWr9EQ4E4DeKyM1sRMQ" alt="" class="cover-video img-responsive">
+                                <div class="container-img__contador">
+                                    <p class="container-img__num">10:39</p>
+                                </div>
+                            </a>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=0Q21HiDJtzo" target="_blank" rel="noopener noreferrer" class="no-style">
+                            <div class="video-info-container">
+                                <div class="avatar">
+                                    <img src="https://yt3.ggpht.com/ytc/AAUvwnhZiunI0CP4_92dZsK2XHMFTVM2YvRF5WOru7u6Lw=s68-c-k-c0x00ffffff-no-rj" alt="avatar" class="avatar-img img-responsive">
+                                </div>
+                                <div class="info-text">
+                                    <div class="div-title">
+                                        <h3 title="Así tapan lo que pasa en Colombia | La Pulla |"class="info-title">Así tapan lo que pasa en Colombia | La Pulla |</h3>
+                                    </div>
+                                    <div class="info-description">
+                                        <span class="info-inline name-inline">La Pulla &#10003;&nbsp;</span>
+                                        <span class="info-inline">7483 de vistas&nbsp; </span>
+                                        <span class="info-inline inline--separator">•<span class="info-inline">&nbsp;hace 14 minutos</span></span>
+                                    </div>
+                                </div>
+                                <div class="btn-info">
+                                    <button class="btn-more no-style">
+                                        <span class="material-icons md-24">more_vert</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <div class="container-img">
+                            <div class="container-img__items">
+                                <div class="item1__left">
+                                    Ver más tarde
+                                </div>
+                                <p class="container-img__item item1">
+                                    <span class="material-icons-round md-16">watch_later</span>
+                                </p>
+                                <div class="item2__left">
+                                    Agregar a la fila
+                                </div>
+                                <p class="container-img__item item2">
+                                    <span class="material-icons-round">playlist_play</span>
+                                </p>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=2V4l8vu9HVA" target="_blank" rel="noopener noreferrer" class="no-style">
+                                <img src="https://i.ytimg.com/vi/2V4l8vu9HVA/hq720.jpg?sqp=-…AFwAcABBg==&rs=AOn4CLCctNeb_rHtLxdV7MqFvOs8t4mQyg" alt="" class="cover-video img-responsive">
+                                <div class="container-img__contador">
+                                    <p class="container-img__num">0:37</p>
+                                </div>
+                            </a>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=2V4l8vu9HVA" target="_blank" rel="noopener noreferrer" class="no-style">
+                            <div class="video-info-container">
+                                <div class="avatar">
+                                    <img src="https://yt3.ggpht.com/ytc/AAUvwnhKvDQuIkgGa167rs5SAmW5LxaI_s0Aqw-B76cN4A=s88-c-k-c0x00ffffff-no-rj" alt="avatar" class="avatar-img img-responsive">
+                                </div>
+                                <div class="info-text">
+                                    <div class="div-title">
+                                        <h3 title="Morat y Danna Paola - Idiota (Teaser Oficial)"class="info-title">Morat y Danna Paola - Idiota (Teaser Oficial)</h3>
+                                    </div>
+                                    <div class="info-description">
+                                        <span class="info-inline name-inline">Morat &#x266a;&nbsp;</span>
+                                        <span class="info-inline">489,982 vistas&nbsp; </span>
+                                        <span class="info-inline inline--separator">•<span class="info-inline">&nbsp;hace 1 día</span></span>
+                                    </div>
+                                </div>
+                                <div class="btn-info">
+                                    <button class="btn-more no-style">
+                                        <span class="material-icons md-24">more_vert</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <div class="container-img">
+                            <div class="container-img__items">
+                                <div class="item1__left">
+                                    Ver más tarde
+                                </div>
+                                <p class="container-img__item item1">
+                                    <span class="material-icons-round md-16">watch_later</span>
+                                </p>
+                                <div class="item2__left">
+                                    Agregar a la fila
+                                </div>
+                                <p class="container-img__item item2">
+                                    <span class="material-icons-round">playlist_play</span>
+                                </p>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=HiFMBLFzk_U" target="_blank" rel="noopener noreferrer" class="no-style">
+                                <img src="https://i.ytimg.com/vi/HiFMBLFzk_U/hq720.jpg?sqp=-…AFwAcABBg==&rs=AOn4CLDES_5YAeE6TwgbYc6ciP3K9Pde0Q" alt="" class="cover-video img-responsive">
+                                <div class="container-img__contador">
+                                    <p class="container-img__num">6:07</p>
+                                </div>
+                            </a>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=HiFMBLFzk_U" target="_blank" rel="noopener noreferrer" class="no-style">
+                            <div class="video-info-container">
+                                <div class="avatar">
+                                    <img src="https://yt3.ggpht.com/ytc/AAUvwngFX_yyuer98GrnkcpLbJTTOEm--RtfUC1r3HnJmQ=s88-c-k-c0x00ffffff-no-rj" alt="avatar" class="avatar-img img-responsive">
+                                </div>
+                                <div class="info-text">
+                                    <div class="div-title">
+                                        <h3 title="Marshmello x 2021 UEFA Champions League Final Opening Ceremony presented by Pepsi #UCLFinal"class="info-title">Marshmello x 2021 UEFA Champions League Final Opening Ceremony presented by Pepsi #UCLFinal</h3>
+                                    </div>
+                                    <div class="info-description">
+                                        <span class="info-inline name-inline">Marshmello &#x266a;&nbsp;</span>
+                                        <span class="info-inline">2.9 M de vistas&nbsp; </span>
+                                        <span class="info-inline inline--separator">•<span class="info-inline">&nbsp;hace 5 días</span></span>
+                                    </div>
+                                </div>
+                                <div class="btn-info">
+                                    <button class="btn-more no-style">
+                                        <span class="material-icons md-24">more_vert</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="grid-videos-extended">
+                    <div class="card">
+                        <div class="container-img">
+                            <div class="container-img__items">
+                                <div class="item1__left">
+                                    Ver más tarde
+                                </div>
+                                <p class="container-img__item item1">
+                                    <span class="material-icons-round md-16">watch_later</span>
+                                </p>
+                                <div class="item2__left">
+                                    Agregar a la fila
+                                </div>
+                                <p class="container-img__item item2">
+                                    <span class="material-icons-round">playlist_play</span>
+                                </p>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=QRHV7xZXxmg" target="_blank" rel="noopener noreferrer" class="no-style">
+                                <img src="https://i.ytimg.com/vi/QRHV7xZXxmg/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDZ1O3neI0zTRnO7PmXveN7fE8ChQ" alt="" class="cover-video img-responsive">
+                                <div class="container-img__contador">
+                                    <p class="container-img__num">1:12:13</p>
+                                </div>
+                            </a>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=QRHV7xZXxmg" target="_blank" rel="noopener noreferrer" class="no-style">
+                            <div class="video-info-container">
+                                <div class="avatar">
+                                    <img src="https://yt3.ggpht.com/ytc/AAUvwnhDFpOapDBcYsJT_LRZxhxkzxw8Dt-wE6HEK8B5xQ=s68-c-k-c0x00ffffff-no-rj" alt="avatar" class="avatar-img img-responsive">
+                                </div>
+                                <div class="info-text">
+                                    <div class="div-title">
+                                        <h3 title="Legend  Bob Marley Cd completo Hd ( Remastered )"class="info-title">Legend  Bob Marley Cd completo Hd ( Remastered )</h3>
+                                    </div>
+                                    <div class="info-description">
+                                        <span class="info-inline name-inline">diego diegol&nbsp;</span>
+                                        <span class="info-inline">7.3 M de vistas&nbsp; </span>
+                                        <span class="info-inline inline--separator">•<span class="info-inline">&nbsp;hace 1 año</span></span>
+                                    </div>
+                                </div>
+                                <div class="btn-info">
+                                    <button class="btn-more no-style">
+                                        <span class="material-icons md-24">more_vert</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <div class="container-img">
+                            <div class="container-img__items">
+                                <div class="item1__left">
+                                    Ver más tarde
+                                </div>
+                                <p class="container-img__item item1">
+                                    <span class="material-icons-round md-16">watch_later</span>
+                                </p>
+                                <div class="item2__left">
+                                    Agregar a la fila
+                                </div>
+                                <p class="container-img__item item2">
+                                    <span class="material-icons-round">playlist_play</span>
+                                </p>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=CEq6_qnZgO4" target="_blank" rel="noopener noreferrer" class="no-style">
+                                <img src="https://i.ytimg.com/vi/CEq6_qnZgO4/hq720.jpg?sqp=-…AFwAcABBg==&rs=AOn4CLA1lsTHaq_mdDOpYcz-DfgJ6gBLIw" alt="" class="cover-video img-responsive">
+                                <div class="container-img__contador">
+                                    <p class="container-img__num">29:01</p>
+                                </div>
+                            </a>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=CEq6_qnZgO4" target="_blank" rel="noopener noreferrer" class="no-style">
+                            <div class="video-info-container">
+                                <div class="avatar">
+                                    <img src="https://yt3.ggpht.com/ytc/AAUvwnhmc2as4qJbDLo_qh6IjXqRp3_Ae29nbXJRCUzsiiQ=s68-c-k-c0x00ffffff-no-rj" alt="avatar" class="avatar-img img-responsive">
+                                </div>
+                                <div class="info-text">
+                                    <div class="div-title">
+                                        <h3 title="Bob Esponja | Mejores Amigos | España | Nickelodeon en Español"class="info-title">Bob Esponja | Mejores Amigos | España | Nickelodeon en Español</h3>
+                                    </div>
+                                    <div class="info-description">
+                                        <span class="info-inline name-inline">Nickelodeon en Español &#10003;&nbsp;</span>
+                                        <span class="info-inline">62 M de vistas&nbsp; </span>
+                                        <span class="info-inline inline--separator">•<span class="info-inline">&nbsp;hace 1 año</span></span>
+                                    </div>
+                                </div>
+                                <div class="btn-info">
+                                    <button class="btn-more no-style">
+                                        <span class="material-icons md-24">more_vert</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <div class="container-img">
+                            <div class="container-img__items">
+                                <div class="item1__left">
+                                    Ver más tarde
+                                </div>
+                                <p class="container-img__item item1">
+                                    <span class="material-icons-round md-16">watch_later</span>
+                                </p>
+                                <div class="item2__left">
+                                    Agregar a la fila
+                                </div>
+                                <p class="container-img__item item2">
+                                    <span class="material-icons-round">playlist_play</span>
+                                </p>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=2fhBvH_-tNM&pp=ugMICgJlcxABGAE%3D" target="_blank" rel="noopener noreferrer" class="no-style">
+                                <img src="	https://i.ytimg.com/vi/2fhBvH_-tNM/hq720.jpg?sqp=-…AFwAcABBg==&rs=AOn4CLAjNx2VCv-IzCp8AHDizHO2kUZpNw" alt="" class="cover-video img-responsive">
+                                <div class="container-img__contador">
+                                    <p class="container-img__num">8:47</p>
+                                </div>
+                            </a>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=2fhBvH_-tNM&pp=ugMICgJlcxABGAE%3D" target="_blank" rel="noopener noreferrer" class="no-style">
+                            <div class="video-info-container">
+                                <div class="avatar">
+                                    <img src="https://yt3.ggpht.com/ytc/AAUvwnjpvnWBX8UwSHUty636lbllR9eU5jzHfWHncBcAqg=s68-c-k-c0x00ffffff-no-rj" alt="avatar" class="avatar-img img-responsive">
+                                </div>
+                                <div class="info-text">
+                                    <div class="div-title">
+                                        <h3 title="Goles que vale la pena volver a ver #3"class="info-title">Goles que vale la pena volver a ver #3</h3>
+                                    </div>
+                                    <div class="info-description">
+                                        <span class="info-inline name-inline">DNpro &#10003;&nbsp;</span>
+                                        <span class="info-inline">4.2 M de vistas&nbsp; </span>
+                                        <span class="info-inline inline--separator">•<span class="info-inline">&nbsp;hace 3 semanas</span></span>
+                                    </div>
+                                </div>
+                                <div class="btn-info">
+                                    <button class="btn-more no-style">
+                                        <span class="material-icons md-24">more_vert</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <div class="container-img">
+                            <div class="container-img__items">
+                                <div class="item1__left">
+                                    Ver más tarde
+                                </div>
+                                <p class="container-img__item item1">
+                                    <span class="material-icons-round md-16">watch_later</span>
+                                </p>
+                                <div class="item2__left">
+                                    Agregar a la fila
+                                </div>
+                                <p class="container-img__item item2">
+                                    <span class="material-icons-round">playlist_play</span>
+                                </p>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=ZNVrYuTBbMM" target="_blank" rel="noopener noreferrer" class="no-style">
+                                <img src="https://i.ytimg.com/vi/ZNVrYuTBbMM/hq720.jpg?sqp=-…AFwAcABBg==&rs=AOn4CLBz7hoCbhI_ZhuFmu2YFkXRL1aZbA" alt="" class="cover-video img-responsive">
+                                <div class="container-img__contador">
+                                    <p class="container-img__num">6:13</p>
+                                </div>
+                            </a>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=ZNVrYuTBbMM" target="_blank" rel="noopener noreferrer" class="no-style">
+                            <div class="video-info-container">
+                                <div class="avatar">
+                                    <img src="https://yt3.ggpht.com/u0jh2HQOYShG57TDRfvUdWWzk0ZLr0Y57mh_YYN2NPrJYq0IY4jx5VydcTYLR-l-0zkcZNCBqg=s88-c-k-c0x00ffffff-no-rj" alt="avatar" class="avatar-img img-responsive">
+                                </div>
+                                <div class="info-text">
+                                    <div class="div-title">
+                                        <h3 title="Redimi2 - Trapstorno (Video Oficial) ft. Natan el Profeta, Rubinsky Rbk, Philippe"class="info-title">Redimi2 - Trapstorno (Video Oficial) ft. Natan el Profeta, Rubinsky Rbk, Philippe</h3>
+                                    </div>
+                                    <div class="info-description">
+                                        <span class="info-inline name-inline">redimi2oficial &#x266a;&nbsp;</span>
+                                        <span class="info-inline">102 M de vistas&nbsp; </span>
+                                        <span class="info-inline inline--separator">•<span class="info-inline">&nbsp;hace 3 años</span></span>
+                                    </div>
+                                </div>
+                                <div class="btn-info">
+                                    <button class="btn-more no-style">
+                                        <span class="material-icons md-24">more_vert</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <div class="container-img">
+                            <div class="container-img__items">
+                                <div class="item1__left">
+                                    Ver más tarde
+                                </div>
+                                <p class="container-img__item item1">
+                                    <span class="material-icons-round md-16">watch_later</span>
+                                </p>
+                                <div class="item2__left">
+                                    Agregar a la fila
+                                </div>
+                                <p class="container-img__item item2">
+                                    <span class="material-icons-round">playlist_play</span>
+                                </p>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=09R8_2nJtjg" target="_blank" rel="noopener noreferrer" class="no-style">
+                                <img src="https://i.ytimg.com/vi/09R8_2nJtjg/hq720.jpg?sqp=-…AFwAcABBg==&rs=AOn4CLAT4NGgj5oXK82SsKDfQsBjV2acCQ" alt="" class="cover-video img-responsive">
+                                <div class="container-img__contador">
+                                    <p class="container-img__num">5:02</p>
+                                </div>
+                            </a>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=09R8_2nJtjg" target="_blank" rel="noopener noreferrer" class="no-style">
+                            <div class="video-info-container">
+                                <div class="avatar">
+                                    <img src="	https://yt3.ggpht.com/ytc/AAUvwnhtPNkQphmOSVeJD-s0L5Ap1YyVSfw8hrNTlv0vaA=s88-c-k-c0x00ffffff-no-rj" alt="avatar" class="avatar-img img-responsive">
+                                </div>
+                                <div class="info-text">
+                                    <div class="div-title">
+                                        <h3 title="Maroon 5 - Sugar (Official Music Video)"class="info-title">Maroon 5 - Sugar (Official Music Video)</h3>
+                                    </div>
+                                    <div class="info-description">
+                                        <span class="info-inline name-inline">Maroon 5 &#x266a;&nbsp;</span>
+                                        <span class="info-inline">3474 M de vistas&nbsp; </span>
+                                        <span class="info-inline inline--separator">•<span class="info-inline">&nbsp;hace 6 años</span></span>
+                                    </div>
+                                </div>
+                                <div class="btn-info">
+                                    <button class="btn-more no-style">
+                                        <span class="material-icons md-24">more_vert</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <div class="container-img">
+                            <div class="container-img__items">
+                                <div class="item1__left">
+                                    Ver más tarde
+                                </div>
+                                <p class="container-img__item item1">
+                                    <span class="material-icons-round md-16">watch_later</span>
+                                </p>
+                                <div class="item2__left">
+                                    Agregar a la fila
+                                </div>
+                                <p class="container-img__item item2">
+                                    <span class="material-icons-round">playlist_play</span>
+                                </p>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=ssZpLOdrChI" target="_blank" rel="noopener noreferrer" class="no-style">
+                                <img src="https://i.ytimg.com/vi/ssZpLOdrChI/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBvBqxzzGUR5qdDYeqyH6qfsYEsZA" alt="" class="cover-video img-responsive">
+                                <div class="container-img__contador">
+                                    <p class="container-img__num">29:43</p>
+                                </div>
+                            </a>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=ssZpLOdrChI" target="_blank" rel="noopener noreferrer" class="no-style">
+                            <div class="video-info-container">
+                                <div class="avatar">
+                                    <img src="https://yt3.ggpht.com/ytc/AAUvwnhY-H0R-CNSzWvlp2DMhNRd2mvvIW-twhKVUfh5fg=s68-c-k-c0x00ffffff-no-rj" alt="avatar" class="avatar-img img-responsive">
+                                </div>
+                                <div class="info-text">
+                                    <div class="div-title">
+                                        <h3 title="Madrid desde el aire - Entre castillos y palacios"class="info-title">Madrid desde el aire - Entre castillos y palacios</h3>
+                                    </div>
+                                    <div class="info-description">
+                                        <span class="info-inline name-inline">Telemadrid&nbsp;</span>
+                                        <span class="info-inline">15,198 vistas&nbsp; </span>
+                                        <span class="info-inline inline--separator">•<span class="info-inline">&nbsp;hace 4 días</span></span>
+                                    </div>
+                                </div>
+                                <div class="btn-info">
+                                    <button class="btn-more no-style">
+                                        <span class="material-icons md-24">more_vert</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <div class="container-img">
+                            <div class="container-img__items">
+                                <div class="item1__left">
+                                    Ver más tarde
+                                </div>
+                                <p class="container-img__item item1">
+                                    <span class="material-icons-round md-16">watch_later</span>
+                                </p>
+                                <div class="item2__left">
+                                    Agregar a la fila
+                                </div>
+                                <p class="container-img__item item2">
+                                    <span class="material-icons-round">playlist_play</span>
+                                </p>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=uwK3GfdAK90" target="_blank" rel="noopener noreferrer" class="no-style">
+                                <img src="https://i.ytimg.com/vi/uwK3GfdAK90/hq720.jpg?sqp=-…AFwAcABBg==&rs=AOn4CLAnDb1YOMumyKLDwEXilm3piaGe4g" alt="" class="cover-video img-responsive">
+                                <div class="container-img__contador">
+                                    <p class="container-img__num">6:29</p>
+                                </div>
+                            </a>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=uwK3GfdAK90" target="_blank" rel="noopener noreferrer" class="no-style">
+                            <div class="video-info-container">
+                                <div class="avatar">
+                                    <img src="https://yt3.ggpht.com/ytc/AAUvwnjTBwsky9N1X1wf3CgaeVVY6uVaS1j60UsxJnhx=s68-c-k-c0x00ffffff-no-rj" alt="avatar" class="avatar-img img-responsive">
+                                </div>
+                                <div class="info-text">
+                                    <div class="div-title">
+                                        <h3 title="Cómo Tu Infancia Afecta Tu Forma De Amar | Psych2Go ESPAÑOL"class="info-title">Cómo Tu Infancia Afecta Tu Forma De Amar | Psych2Go ESPAÑOL</h3>
+                                    </div>
+                                    <div class="info-description">
+                                        <span class="info-inline name-inline">Psych2Go Español&nbsp;</span>
+                                        <span class="info-inline">309,626 vistas&nbsp; </span>
+                                        <span class="info-inline inline--separator">•<span class="info-inline">&nbsp;hace 5 meses</span></span>
+                                    </div>
+                                </div>
+                                <div class="btn-info">
+                                    <button class="btn-more no-style">
+                                        <span class="material-icons md-24">more_vert</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <div class="container-img">
+                            <div class="container-img__items">
+                                <div class="item1__left">
+                                    Ver más tarde
+                                </div>
+                                <p class="container-img__item item1">
+                                    <span class="material-icons-round md-16">watch_later</span>
+                                </p>
+                                <div class="item2__left">
+                                    Agregar a la fila
+                                </div>
+                                <p class="container-img__item item2">
+                                    <span class="material-icons-round">playlist_play</span>
+                                </p>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=OA5d65AAGJw" target="_blank" rel="noopener noreferrer" class="no-style">
+                                <img src="https://i.ytimg.com/vi/OA5d65AAGJw/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCmEhnmBTvk3wwCmZeMLkBMy2qT3Q" alt="" class="cover-video img-responsive">
+                                <div class="container-img__contador">
+                                    <p class="container-img__num">2:23:33</p>
+                                </div>
+                            </a>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=OA5d65AAGJw" target="_blank" rel="noopener noreferrer" class="no-style">
+                            <div class="video-info-container">
+                                <div class="avatar">
+                                    <img src="https://yt3.ggpht.com/ytc/AAUvwngEoR2uQZkx1IxwVRaK15fV2hBS4tdkhF8gNfoq=s68-c-k-c0x00ffffff-no-rj" alt="avatar" class="avatar-img img-responsive">
+                                </div>
+                                <div class="info-text">
+                                    <div class="div-title">
+                                        <h3 title="SALSA MIX 2021 | Maelo Ruíz - Tito Rojas - Nino Segara - Willie González Sus Mejores Cancíones"class="info-title">SALSA MIX 2021 | Maelo Ruíz - Tito Rojas - Nino Segara - Willie González Sus Mejores Cancíones</h3>
+                                    </div>
+                                    <div class="info-description">
+                                        <span class="info-inline name-inline">Salsa Romantica&nbsp;</span>
+                                        <span class="info-inline">3.6 M de vistas&nbsp; </span>
+                                        <span class="info-inline inline--separator">•<span class="info-inline">&nbsp;hace 4 meses</span></span>
+                                    </div>
+                                </div>
+                                <div class="btn-info">
+                                    <button class="btn-more no-style">
+                                        <span class="material-icons md-24">more_vert</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <div class="container-img">
+                            <div class="container-img__items">
+                                <div class="item1__left">
+                                    Ver más tarde
+                                </div>
+                                <p class="container-img__item item1">
+                                    <span class="material-icons-round md-16">watch_later</span>
+                                </p>
+                                <div class="item2__left">
+                                    Agregar a la fila
+                                </div>
+                                <p class="container-img__item item2">
+                                    <span class="material-icons-round">playlist_play</span>
+                                </p>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=HMnatoiMdjA" target="_blank" rel="noopener noreferrer" class="no-style">
+                                <img src="https://i.ytimg.com/vi/HMnatoiMdjA/hq720_live.jpg?…AFwAcABBg==&rs=AOn4CLD0TLxDM2PH2IfCllKt5O5vohE8jw" alt="" class="cover-video img-responsive">
+                                <div class="container-img__contador">
+                                    <p class="container-img__num">39:08</p>
+                                </div>
+                            </a>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=HMnatoiMdjA" target="_blank" rel="noopener noreferrer" class="no-style">
+                            <div class="video-info-container">
+                                <div class="avatar">
+                                    <img src="https://yt3.ggpht.com/ytc/AAUvwnhp0QC6XklEuC3GNgS5vRjYDjbrB5NzixY0fyTJ=s68-c-k-c0x00ffffff-no-rj" alt="avatar" class="avatar-img img-responsive">
+                                </div>
+                                <div class="info-text">
+                                    <div class="div-title">
+                                        <h3 title="FLYING OVER NATURE  (4K UHD) - Relaxing Music Along With Beautiful Nature Videos - 4K Video Ultra HD"class="info-title">FLYING OVER NATURE  (4K UHD) - Relaxing Music Along With Beautiful Nature Videos - 4K Video Ultra HD</h3>
+                                    </div>
+                                    <div class="info-description">
+                                        <span class="info-inline name-inline">Piano Relaxing&nbsp;</span>
+                                        <span class="info-inline">1.5 M de vistas&nbsp; </span>
+                                        <span class="info-inline inline--separator">•<span class="info-inline">&nbsp;hace 5 meses</span></span>
+                                    </div>
+                                </div>
+                                <div class="btn-info">
+                                    <button class="btn-more no-style">
+                                        <span class="material-icons md-24">more_vert</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <div class="container-img">
+                            <div class="container-img__items">
+                                <div class="item1__left">
+                                    Ver más tarde
+                                </div>
+                                <p class="container-img__item item1">
+                                    <span class="material-icons-round md-16">watch_later</span>
+                                </p>
+                                <div class="item2__left">
+                                    Agregar a la fila
+                                </div>
+                                <p class="container-img__item item2">
+                                    <span class="material-icons-round">playlist_play</span>
+                                </p>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=_8Y_HpznWxQ" target="_blank" rel="noopener noreferrer" class="no-style">
+                                <img src="https://i.ytimg.com/vi/_8Y_HpznWxQ/hq720.jpg?sqp=-…AFwAcABBg==&rs=AOn4CLBoWrWPfGuxWI1bMByuHmMTLA8gVQ" alt="" class="cover-video img-responsive">
+                                <div class="container-img__contador">
+                                    <p class="container-img__num">3:20:05</p>
+                                </div>
+                            </a>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=_8Y_HpznWxQ" target="_blank" rel="noopener noreferrer" class="no-style">
+                            <div class="video-info-container">
+                                <div class="avatar">
+                                    <img src="https://yt3.ggpht.com/ytc/AAUvwngTk6IVotuA8CHtpK1xRvunS8l5NkBdaRjv_Lkp=s68-c-k-c0x00ffffff-no-rj" alt="avatar" class="avatar-img img-responsive">
+                                </div>
+                                <div class="info-text">
+                                    <div class="div-title">
+                                        <h3 title="Whiskey Blues | Best of Slow Blues/ Blues Rock - Modern electric blues"class="info-title">Whiskey Blues | Best of Slow Blues/ Blues Rock - Modern electric blues</h3>
+                                    </div>
+                                    <div class="info-description">
+                                        <span class="info-inline name-inline">JAZZ & BLUES&nbsp;</span>
+                                        <span class="info-inline">1.9 M de vistas&nbsp; </span>
+                                        <span class="info-inline inline--separator">•<span class="info-inline">&nbsp;hace 3 meses</span></span>
+                                    </div>
+                                </div>
+                                <div class="btn-info">
+                                    <button class="btn-more no-style">
+                                        <span class="material-icons md-24">more_vert</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <div class="container-img">
+                            <div class="container-img__items">
+                                <div class="item1__left">
+                                    Ver más tarde
+                                </div>
+                                <p class="container-img__item item1">
+                                    <span class="material-icons-round md-16">watch_later</span>
+                                </p>
+                                <div class="item2__left">
+                                    Agregar a la fila
+                                </div>
+                                <p class="container-img__item item2">
+                                    <span class="material-icons-round">playlist_play</span>
+                                </p>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=D_K45Ltfb24" target="_blank" rel="noopener noreferrer" class="no-style">
+                                <img src="https://i.ytimg.com/vi/D_K45Ltfb24/hq720.jpg?sqp=-…AFwAcABBg==&rs=AOn4CLCodo8lK3DYSmAmfSV-hwVxMip5UA" alt="" class="cover-video img-responsive">
+                                <div class="container-img__contador">
+                                    <p class="container-img__num">11:54:59</p>
+                                </div>
+                            </a>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=D_K45Ltfb24" target="_blank" rel="noopener noreferrer" class="no-style">
+                            <div class="video-info-container">
+                                <div class="avatar">
+                                    <img src="https://yt3.ggpht.com/ytc/AAUvwnj0yrHqj9aKRw9qi7_08z0bknUW8y5-Dct72qU=s68-c-k-c0x00ffffff-no-rj" alt="avatar" class="avatar-img img-responsive">
+                                </div>
+                                <div class="info-text">
+                                    <div class="div-title">
+                                        <h3 title="Lionel Richie, Phil Collins, Air Supply, Bee Gees, Chicago, Rod Stewart - Best Soft Rock 70s,80s,90s"class="info-title">Lionel Richie, Phil Collins, Air Supply, Bee Gees, Chicago, Rod Stewart - Best Soft Rock 70s,80s,90s</h3>
+                                    </div>
+                                    <div class="info-description">
+                                        <span class="info-inline name-inline">Music Experience&nbsp;</span>
+                                        <span class="info-inline">2.5 M de vistas&nbsp; </span>
+                                        <span class="info-inline inline--separator">•<span class="info-inline">&nbsp;hace 5 meses</span></span>
+                                    </div>
+                                </div>
+                                <div class="btn-info">
+                                    <button class="btn-more no-style">
+                                        <span class="material-icons md-24">more_vert</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <div class="container-img">
+                            <div class="container-img__items">
+                                <div class="item1__left">
+                                    Ver más tarde
+                                </div>
+                                <p class="container-img__item item1">
+                                    <span class="material-icons-round md-16">watch_later</span>
+                                </p>
+                                <div class="item2__left">
+                                    Agregar a la fila
+                                </div>
+                                <p class="container-img__item item2">
+                                    <span class="material-icons-round">playlist_play</span>
+                                </p>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=u_JqHUg_4x4" target="_blank" rel="noopener noreferrer" class="no-style">
+                                <img src="	https://i.ytimg.com/vi/u_JqHUg_4x4/hq720.jpg?sqp=-…AFwAcABBg==&rs=AOn4CLA7UT7OLHgHERC4-SMxZ5CIBV3FTA" alt="" class="cover-video img-responsive">
+                                <div class="container-img__contador">
+                                    <p class="container-img__num">2:59:29</p>
+                                </div>
+                            </a>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=u_JqHUg_4x4" target="_blank" rel="noopener noreferrer" class="no-style">
+                            <div class="video-info-container">
+                                <div class="avatar">
+                                    <img src="https://yt3.ggpht.com/ytc/AAUvwnhGterogP8wQXICixE3QkaM1f_dHS0v-urhpxeEOg=s68-c-k-c0x00ffffff-no-rj" alt="avatar" class="avatar-img img-responsive">
+                                </div>
+                                <div class="info-text">
+                                    <div class="div-title">
+                                        <h3 title="MIX SALSA Y BACHATA DADDY YANKEE, MARC ANTONY, PRINCE ROYCE, ROMEO SANTOS AVENTURA de SUMMER HITS"class="info-title">MIX SALSA Y BACHATA DADDY YANKEE, MARC ANTONY, PRINCE ROYCE, ROMEO SANTOS AVENTURA de SUMMER HITS</h3>
+                                    </div>
+                                    <div class="info-description">
+                                        <span class="info-inline name-inline">SUMMER HITS&nbsp;</span>
+                                        <span class="info-inline">1.1 M de vistas&nbsp; </span>
+                                        <span class="info-inline inline--separator">•<span class="info-inline">&nbsp;hace 2 meses</span></span>
+                                    </div>
+                                </div>
+                                <div class="btn-info">
+                                    <button class="btn-more no-style">
+                                        <span class="material-icons md-24">more_vert</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <div class="container-img">
+                            <div class="container-img__items">
+                                <div class="item1__left">
+                                    Ver más tarde
+                                </div>
+                                <p class="container-img__item item1">
+                                    <span class="material-icons-round md-16">watch_later</span>
+                                </p>
+                                <div class="item2__left">
+                                    Agregar a la fila
+                                </div>
+                                <p class="container-img__item item2">
+                                    <span class="material-icons-round">playlist_play</span>
+                                </p>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=sDKnKzYyx5c" target="_blank" rel="noopener noreferrer" class="no-style">
+                                <img src="https://i.ytimg.com/vi/sDKnKzYyx5c/hq720.jpg?sqp=-…AFwAcABBg==&rs=AOn4CLAZ485xVQxkEc-GslAvtTyq9N1XMA" alt="" class="cover-video img-responsive">
+                                <div class="container-img__contador">
+                                    <p class="container-img__num">4:05</p>
+                                </div>
+                            </a>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=sDKnKzYyx5c" target="_blank" rel="noopener noreferrer" class="no-style">
+                            <div class="video-info-container">
+                                <div class="avatar">
+                                    <img src="https://yt3.ggpht.com/ytc/AAUvwng0K6LAPMSK_p3TBli3oL3TRxlOI5YOUnIo7i0e3Q=s88-c-k-c0x00ffffff-no-rj" alt="avatar" class="avatar-img img-responsive">
+                                </div>
+                                <div class="info-text">
+                                    <div class="div-title">
+                                        <h3 title="KAROL G, Maluma - Créeme (Official Video)"class="info-title">KAROL G, Maluma - Créeme (Official Video)</h3>
+                                    </div>
+                                    <div class="info-description">
+                                        <span class="info-inline name-inline">KAROL G &#x266a;&nbsp;</span>
+                                        <span class="info-inline">471 M de vistas&nbsp; </span>
+                                        <span class="info-inline inline--separator">•<span class="info-inline">&nbsp;hace 2 años</span></span>
+                                    </div>
+                                </div>
+                                <div class="btn-info">
+                                    <button class="btn-more no-style">
+                                        <span class="material-icons md-24">more_vert</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <div class="container-img">
+                            <div class="container-img__items">
+                                <div class="item1__left">
+                                    Ver más tarde
+                                </div>
+                                <p class="container-img__item item1">
+                                    <span class="material-icons-round md-16">watch_later</span>
+                                </p>
+                                <div class="item2__left">
+                                    Agregar a la fila
+                                </div>
+                                <p class="container-img__item item2">
+                                    <span class="material-icons-round">playlist_play</span>
+                                </p>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=GfIvfO9o6lo" target="_blank" rel="noopener noreferrer" class="no-style">
+                                <img src="	https://i.ytimg.com/vi/GfIvfO9o6lo/hq720.jpg?sqp=-…AFwAcABBg==&rs=AOn4CLCxbOWq-Mim6vr40k4Hea_hLKWGNQ" alt="" class="cover-video img-responsive">
+                                <div class="container-img__contador">
+                                    <p class="container-img__num">3:01:59</p>
+                                </div>
+                            </a>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=GfIvfO9o6lo" target="_blank" rel="noopener noreferrer" class="no-style">
+                            <div class="video-info-container">
+                                <div class="avatar">
+                                    <img src="https://yt3.ggpht.com/ytc/AAUvwnjiHN-QErH_ISbByrEyRiu6O0Q4uezsS3x24rDD=s68-c-k-c0x00ffffff-no-rj" alt="avatar" class="avatar-img img-responsive">
+                                </div>
+                                <div class="info-text">
+                                    <div class="div-title">
+                                        <h3 title="Chill Drive - Lofi hip hop mix ~ Stress Relief, Relaxing Music"class="info-title">Chill Drive - Lofi hip hop mix ~ Stress Relief, Relaxing Music</h3>
+                                    </div>
+                                    <div class="info-description">
+                                        <span class="info-inline name-inline">chilli music&nbsp;</span>
+                                        <span class="info-inline">740,383 vistas&nbsp; </span>
+                                        <span class="info-inline inline--separator">•<span class="info-inline">&nbsp;hace 2 semanas</span></span>
+                                    </div>
+                                </div>
+                                <div class="btn-info">
+                                    <button class="btn-more no-style">
+                                        <span class="material-icons md-24">more_vert</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <div class="container-img">
+                            <div class="container-img__items">
+                                <div class="item1__left">
+                                    Ver más tarde
+                                </div>
+                                <p class="container-img__item item1">
+                                    <span class="material-icons-round md-16">watch_later</span>
+                                </p>
+                                <div class="item2__left">
+                                    Agregar a la fila
+                                </div>
+                                <p class="container-img__item item2">
+                                    <span class="material-icons-round">playlist_play</span>
+                                </p>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=At5e_Jvwb5c" target="_blank" rel="noopener noreferrer" class="no-style">
+                                <img src="https://i.ytimg.com/vi/At5e_Jvwb5c/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCG-_1sCMK_QEcHy02--qJ_ky09dw" alt="" class="cover-video img-responsive">
+                                <div class="container-img__contador">
+                                    <p class="container-img__num">1:43:15</p>
+                                </div>
+                            </a>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=At5e_Jvwb5c" target="_blank" rel="noopener noreferrer" class="no-style">
+                            <div class="video-info-container">
+                                <div class="avatar">
+                                    <img src="https://yt3.ggpht.com/ytc/AAUvwng3_QZEExQ_jyr7KKYZqKnhQoJvGU_2HoO3OH2thA=s88-c-k-c0x00ffffff-no-rj" alt="avatar" class="avatar-img img-responsive">
+                                </div>
+                                <div class="info-text">
+                                    <div class="div-title">
+                                        <h3 title="PODEROSO MANTRA ✨ Atrae el Amor Verdadero | Sana Tus Relaciones"class="info-title">PODEROSO MANTRA ✨ Atrae el Amor Verdadero | Sana Tus Relaciones</h3>
+                                    </div>
+                                    <div class="info-description">
+                                        <span class="info-inline name-inline">RELAX and Live&nbsp;</span>
+                                        <span class="info-inline">2532 vistas&nbsp; </span>
+                                        <span class="info-inline inline--separator">•<span class="info-inline">&nbsp;hace 9 meses</span></span>
+                                    </div>
+                                </div>
+                                <div class="btn-info">
+                                    <button class="btn-more no-style">
+                                        <span class="material-icons md-24">more_vert</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <div class="container-img">
+                            <div class="container-img__items">
+                                <div class="item1__left">
+                                    Ver más tarde
+                                </div>
+                                <p class="container-img__item item1">
+                                    <span class="material-icons-round md-16">watch_later</span>
+                                </p>
+                                <div class="item2__left">
+                                    Agregar a la fila
+                                </div>
+                                <p class="container-img__item item2">
+                                    <span class="material-icons-round">playlist_play</span>
+                                </p>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=zzSgzO1E6l8" target="_blank" rel="noopener noreferrer" class="no-style">
+                                <img src="https://i.ytimg.com/vi/zzSgzO1E6l8/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDFWyI1RRbRXNcT8pNa6T2mHu1T5Q" alt="" class="cover-video img-responsive">
+                                <div class="container-img__contador">
+                                    <p class="container-img__num">1:40:12</p>
+                                </div>
+                            </a>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=zzSgzO1E6l8" target="_blank" rel="noopener noreferrer" class="no-style">
+                            <div class="video-info-container">
+                                <div class="avatar">
+                                    <img src="https://yt3.ggpht.com/ytc/AAUvwng82z8tBj9Wcg6HIFBLBw6b8IQdBARKskprbLT3uw=s68-c-k-c0x00ffffff-no-rj" alt="avatar" class="avatar-img img-responsive">
+                                </div>
+                                <div class="info-text">
+                                    <div class="div-title">
+                                        <h3 title="MIX ROCK ALTERNATIVO 2020 (clásicos) - [JeraxMusic]"class="info-title">MIX ROCK ALTERNATIVO 2020 (clásicos) - [JeraxMusic]</h3>
+                                    </div>
+                                    <div class="info-description">
+                                        <span class="info-inline name-inline">DJ JERAX [Music]&nbsp;</span>
+                                        <span class="info-inline">2.4 M de vistas&nbsp; </span>
+                                        <span class="info-inline inline--separator">•<span class="info-inline">&nbsp;hace 1 año</span></span>
+                                    </div>
+                                </div>
+                                <div class="btn-info">
+                                    <button class="btn-more no-style">
+                                        <span class="material-icons md-24">more_vert</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
